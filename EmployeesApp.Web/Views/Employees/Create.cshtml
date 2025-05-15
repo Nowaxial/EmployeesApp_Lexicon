@@ -19,12 +19,13 @@
 
         <input type="submit" style="width: 300px;" value="Save" />
     </form>
+    @if (ViewData.ModelState.ErrorCount > 0)
+    {
     <div asp-validation-summary="All">
         <ul>
-            <li></li>
         </ul>
-
-
     </div>
+    }
+    <h2><a href="/">Back to Index</a></h2>
 </body>
 </html>
