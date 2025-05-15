@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations; 
+﻿using System.ComponentModel.DataAnnotations;
+using EmployeesApp.Web.Models.Validation;
 
 namespace EmployeesApp.Web.Models
 
@@ -8,6 +9,7 @@ namespace EmployeesApp.Web.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Name is required")]
+        [HardCodedTeachers(["Pontus", "Håkan", "Jonathan"])]
         public string Name { get; set; } = null!;
 
         [Required(ErrorMessage = "Email is required")]
