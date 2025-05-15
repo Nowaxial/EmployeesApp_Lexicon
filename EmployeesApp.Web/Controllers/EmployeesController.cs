@@ -21,6 +21,8 @@ namespace EmployeesApp.Web.Controllers
         [HttpPost("/create")]
         public IActionResult CreateEmployee(Employee employee)
         {
+
+            if (!ModelState.IsValid) return View();
             employeeService.AddEmployee(employee);
             return RedirectToAction(nameof(Index));
         }
