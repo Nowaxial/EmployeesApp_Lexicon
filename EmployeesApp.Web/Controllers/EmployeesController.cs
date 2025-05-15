@@ -14,12 +14,12 @@ namespace EmployeesApp.Web.Controllers
 
         [HttpGet("/create")]
 
-        public IActionResult CreateEmployee()
+        public IActionResult Create()
         {
             return View();
         }
         [HttpPost("/create")]
-        public IActionResult CreateEmployee(Employee employee)
+        public IActionResult Create(Employee employee)
         {
 
             if (!ModelState.IsValid) return View();
