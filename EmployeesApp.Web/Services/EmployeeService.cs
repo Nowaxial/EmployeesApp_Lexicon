@@ -16,8 +16,8 @@ namespace EmployeesApp.Web.Services
             employees.Add(employee);
         }
 
-        public void GetEmployeeById(int id) => employees.Single(e => e.Id == id);
+        public Employee GetEmployeeById(int id) => employees.Single(e => e.Id == id);
 
-        public void GetAllEmployees() => employees.OrderBy(e => e.Name).ToArray();
+        public Employee[] GetAllEmployees() => employees.OrderBy(e => e.Name).ToArray();
     }
 }
